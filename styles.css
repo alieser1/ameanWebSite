@@ -1,6 +1,121 @@
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
+:root{
+    color: pink;
+    color: violet;
+}
 
 *{
     font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+
+}
+
+*::selection{
+    background:var(pink);
+    color: white;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: gray;
+}
+
+header{
+    width: 96%;
+    background: rgb(130, 94, 26);
+    position: fixed;
+    top: 2rem; left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+
+} 
+header .navbar ul li{
+    margin: 0 1rem;
+}
+
+header .navbar ul li a{
+    font-size:  2rem;
+    color: blanchedalmond;
+    transition: .2s;
+
+}
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+    color:rgb(180, 172, 157)
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: rgb(215, 185, 121);
+    text-transform: uppercase;
+}
+
+header .logo i{
+    color: rgb(4, 144, 130);
+    padding: 0 2rem;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: rgb(215, 185, 121);
+    cursor: pointer;
+    display: none;
+}
+
+
+@media(max-width:768px){
+    html{
+        font-size: 55%;
+    }
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: fixed;
+        top:-100rem; left: 0;
+        width: 100%;
+        background: rgb(138, 42, 42);
+        border-radius: 1rem;
+        opacity: 0;
+    }
+    header .navbar ul{
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+    header .navbar ul li{
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    header .navbar ul li{
+        font-size: 3rem;
+        display: block;
+        text-align: center;
+    }
+    header .navbar ul li{
+        font-size: 3rem;
+        display: block;
+    }
 }
